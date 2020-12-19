@@ -20,10 +20,10 @@ int main()
 
 
     load_images(path, images_fn);
-    imshow("Image window", images_fn[3]);
+    resize(images_fn[1], images_fn[1], Size(), 0.25, 0.25);
+    imshow("Image window", images_fn[1]);
 
     //Mat img = imread("Test_images/1.bmp", IMREAD_GRAYSCALE);
-    //resize(img, img, Size(), 0.1, 0.1);
     cout << images_fn[3].cols;
   /*  for (int x = 0; x <= img.rows; x++)
     {
@@ -34,7 +34,7 @@ int main()
             cout << "pixel_value2: " << pixel_value2 << endl;
         }
     }*/
-    pixel_value2 = images_fn[3].at<uchar>(200, 200);
+    pixel_value2 = images_fn[1].at<uchar>(200, 200);
     cout << "pixel_value2: " << pixel_value2 << endl;
     waitKey(0);
     return 0;
